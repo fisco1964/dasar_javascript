@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>arrow function di object method</title>
+</head>
+<body>
+    <script>
+        //tanpa arrow function(DI REKOMENDASIKAN)
+        const orang = {
+            name: "eko",
+            sayHalo: function (name){
+                console.info(`hello ${name}, my name is ${this.name}`);
+            }
+        };
+        orang.sayHalo("Budi without arrow function");
+
+        // menggunakan arrow function(TIDAK DI REKOMENDASIKAN)
+        const orang1 = {
+            name: "eko",
+            sayHalo: (name) =>{
+                console.info(`hello ${name}, my name is ${this.name}`); //this.name tidak terbaca karena
+            }
+        };
+        orang1.sayHalo("jojo use arrow function");
+    </script>
+</body>
+</html>

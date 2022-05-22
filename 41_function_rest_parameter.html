@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>function rest parameter</title>
+</head>
+<body>
+    <script>
+        function hitung(name, ...data) {
+            let total = 0
+        for (const item of data) { 
+                total += item;
+            }
+            document.writeln(`<p>Total Keseluruhan ${name} adalah ${total}</p>`);
+        }
+
+        hitung("pisang", 10, 20, 30, 40, 98);
+        hitung("anggur", 10, 54, 30, 40, 98);
+        hitung("apel", 10, 20, 30, 40, 98);
+        hitung("jeruk", 10, 41, 30, 40, 98);
+        hitung("mangga", 30, 20, 30, 40, 98);
+        hitung("jambu", 10, 440, 30, 40, 98);
+        hitung("rambutan", 10, 70, 30, 40, 98);
+        hitung("nanas", 10, 20, 30, 40, 98);
+        hitung("melon", 10, 281, 30, 40, 98);
+        hitung("sirsak", 10, 20, 12, 40, 98);
+    
+    //Spread Syntax -> mengirim array ke rest parameter
+    const nilai_data_array = [10765, 70, 23, 4, 1];
+    hitung("Test", ...nilai_data_array);
+
+        
+
+            
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>getter and setter</title>
+</head>
+<body>
+    <script>
+        //tanpa menggunakan getter
+        const orang = {
+            namaDepan: "jojo",
+            namaBelakang: "mantiz",
+            namaLengkap: function () {
+                return `${this.namaDepan} ${this.namaBelakang}`;
+            }
+        };
+        orang.namaDepan = "alphonso";
+        console.info(orang.namaLengkap());
+        
+        //mengunakan getter
+        const person = {
+            namaDepan: "jojo",
+            namaBelakang: "mantiz",
+            get namaLengkap () {
+                return `${this.namaDepan} ${this.namaBelakang}`;
+            },
+        //menggunakan setter
+            set namaLengkap(nilai){
+                const array = nilai.split(" ");
+                this.namaDepan = array[0];
+                this.namaBelakang = array[1];
+            }
+        };
+        person.namaDepan = "budi";
+        console.info(person.namaLengkap);
+
+        person.namaLengkap = "budi nugraha";
+        console.table(person);
+
+        person.namaLengkap = "alfa khira";
+        console.table(person);
+
+        person.namaLengkap = "amanda amalia";
+        console.table(person);
+
+        person.namaLengkap = "aya sofia";
+        console.table(person);
+
+    </script>
+</body>
+</html>

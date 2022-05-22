@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Operator IN</title>
+</head>
+<body>
+    <script>
+        const person = {
+            firstname: "jojo",
+            lastName: "Mantiz"
+        };
+
+        if ("firstname" in person) {
+            alert(`Hello ${person.firstname}`);
+        } else {
+            alert(`Hello`);
+        }
+
+        const student = {
+            fname: "alfonso",
+            mname: "eric",
+            lname: "mantiz"
+        }
+
+       if ("mname" in student) {
+            alert(`hello ${student.mname}`);  
+       } else {
+           alert("hello Student");
+       }
+    </script>
+</body>
+</html>

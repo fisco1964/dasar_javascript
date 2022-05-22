@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>destructuring</title>
+</head>
+<body>
+    <script>
+    //tanpa menggunakan destruction
+        const names = ["eko", "kurniawan", "khanedy"];
+        const namaDepan = names[0];
+        const namaBelakang = names[1];
+        const namaLengkap = names[2];
+
+        console.info(namaDepan)
+        console.info(namaBelakang)
+        console.info(namaLengkap)
+
+    //menggunakan destruction array
+    {
+        const nama = ["uciha", "sayuti", "udin", "rachmad", "muharram", "murdani"];
+        const[firstName, middleName, lastName, ...others] = nama;
+
+        console.info(firstName)
+        console.info(middleName)
+        console.info(lastName)
+        console.info(others)
+    }
+    //mengambil data di object menggunakan destruction
+    {
+        const person = {
+            firstName: "muhammad",
+            lastName: "riski",
+            address: {
+                street: "jalan sawah besar",
+                city: "jakarta",
+                contry: "indonesia"
+            },
+            hobby: "game",
+            channelYt: "programmer zaman now"
+        };
+            let {firstName, lastName, address:{city, street, contry}, ...others} = person;
+            console.info(firstName);
+            console.info(lastName);
+            console.info(city);
+            console.info(street);
+            console.info(contry);
+            console.info(others);
+    }
+
+    {
+        // tanpa menggunkan destruction function parameter
+        function displayPerson(person) {
+            console.info(person.firstName);
+            console.info(person.middleName);
+            console.info(person.lastName);
+
+        }
+        const person = {
+            firstName: "joko",
+            middleName: "ealphonso",
+            lastName: "eric",
+           
+        };
+        displayPerson(person);
+    }
+
+    
+    {
+        //menggunkan destruction function parameter
+        function displayPerson({firstName, middleName, lastName}) {
+            console.info(firstName);
+            console.info(middleName);
+            console.info(lastName);
+
+        }
+        const person = {
+            firstName: "joko, use destruction function parameter",
+            middleName: "ealphonso, use destruction function parameter",
+            lastName: "eric, use destruction function parameter",
+           
+        };
+        displayPerson(person);
+    }
+
+    {
+        //tanpa menggunkan destruction function parameter
+        function sum (array){
+            return array[0] + array[1];
+        }
+        console.info(sum([1,1]))
+        console.info(sum([1,10]))
+        console.info(sum([20,10]))
+    }
+
+    {
+        //menggunkan destruction function parameter
+        function sum ([pertama, kedua]){
+            return pertama + kedua
+        }
+        console.info(sum([132,1]))
+        console.info(sum([1,713]))
+        console.info(sum([340,10]))
+    }
+
+    {
+
+        const names = ["xaxi", "rohid"];
+        const [firstName, middleName, lastName = "rahul"] = names;
+
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName);
+    }
+    {
+        const person = {
+            firstName: "muhammad",
+            lastName: "simbolon",
+            
+        };
+            let {firstName, middleName = "riski", lastName} = person;
+            console.info(firstName);
+            console.info(middleName);
+            console.info(lastName);
+            
+    }
+    {
+        //menggunakan nama variable lain
+        const person = {
+            firstName: "muhammad",
+            lastName: "simbolon"
+            
+        };
+            let {firstName: namaDepan, 
+                middleName: namaTengah = "kurniawan",
+                lastName: namaBelakang} = person;
+            console.info(namaDepan);
+            console.info(namaTengah);
+            console.info(namaBelakang);
+            
+    }
+    </script>
+</body>
+</html>

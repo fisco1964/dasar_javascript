@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>scope</title>
+</head>
+<body>
+    <script>
+        let hitung = 0;
+        // global scope
+
+        
+        function pukulSaya() {
+        //local scope pukulSaya
+            hitung++;
+        }
+   
+        function other() {
+        //local scope other
+        }
+
+            pukulSaya();
+            pukulSaya();
+            console.info(hitung);
+
+        function pertama() {
+        //local scope pertama
+        let variablePertama = "first";
+
+            function pertamaNested() {
+                console.info(variablePertama);
+            }
+            
+            pertamaNested(); 
+        }
+            
+        
+        function kedua() {
+        //local scope pertama
+        let keduaVariable = "kedua kali" 
+        }
+
+        pertama();
+    </script>
+</body>
+</html>

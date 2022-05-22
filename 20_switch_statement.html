@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SWITCH</title>
+</head>
+<body>
+    <script>
+        const nilai = "E";
+        switch (nilai) {
+            case "A":
+                document.writeln("<p>wow anda sangat hebat</p>");
+                break;
+            case "B":
+            case "C":
+                document.writeln("<p>Anda Lulus</p>");
+                break;
+            case "D":
+                document.writeln("<p>Tidak Lulus</p>");
+                break;
+        
+            default:
+                document.writeln("<p>Fix anda goblok dan salah masuk Jurusan</p>")
+        }
+
+        //alternatif menggunakan IF
+        const nilaiIF = "A"
+        if (nilaiIF === "A") {
+            document.writeln("<p>wow anda sangat hebat</p>");
+
+        } else if (nilaiIF === "B" || nilaiIF === "C") {
+            document.writeln("<p>Anda Lulus</p>");
+
+        } else if (nilaiIF === "D") {
+            document.writeln("<p>Tidak Lulus</p>");
+        
+        } else {
+            document.writeln("<p>Fix anda goblok dan salah masuk Jurusan</p>");
+        }
+    </script>
+</body>
+</html>

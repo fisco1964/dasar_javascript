@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let say = function (nama){
+            document.writeln(`<p>halo ${nama}</p>`);
+        };
+        say("Rachmad Muharram")
+        say("jojo mantiz")
+        say("alphonso")
+    //anonymous function di parameter
+        function isiNama(callback) {
+        callback("eko")
+    }
+        isiNama(say);
+
+        isiNama(function(nama){
+            document.writeln(`<p>hi ${nama}</p>`);
+    });
+        isiNama(function(nama){
+            document.writeln(`<p>hi ${nama}</p>`);
+    });
+    </script>
+</body>
+</html>

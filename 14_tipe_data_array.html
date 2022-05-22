@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Array</title>
+</head>
+<body>
+    <script>
+        let arrayKosong = [];
+        let arrayName = ["rachmad", "muharram", "murdani", "1", true];
+        
+        const name = [];
+        name.push("rachmad");
+        name.push("muharram", "murdani");
+        name.push("jojo", "matiz", "alpha", "fisco");
+        name.push(1,2,3,4,5,6,7,8,9,9999);
+
+        console.table(name);
+        
+        console.log(name[0]);
+        console.log(name[3]);
+        console.log(name[2]);
+
+        name[0] = "bovis";
+        name[1] = "nvidia";
+
+        console.table(name);
+
+        delete name[4];
+
+        name[3] = "jojo";
+        name.push(1,2,3,4,5,6);
+        name.push(["milan", "barcelona", "madrid"]);
+        console.table(name);
+        
+    </script>
+</body>
+</html>

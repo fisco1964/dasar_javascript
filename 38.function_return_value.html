@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>function return value</title>
+</head>
+<body>
+    <script>
+        function sayHalo(fname, lname) {
+            const say = `halo ${fname} ${lname} nilai ujian final anda saat ini`;
+            return say
+        }
+
+        //memanggil function dan mengkap return value nya
+        const result = sayHalo("Eko", "Kurniawan");
+        document.writeln(`<p>${result}</p>`);
+
+        //function return value lebih dari satu
+        function hasilNilaiFinal(nilai) {
+         if (nilai > 90) {
+             return "A";
+         } else if (nilai > 80){
+             return "B";
+         } else if (nilai > 70){
+             return "C";
+         } else if (nilai > 60){
+             return "D";
+         } else {
+             return "E";
+         }
+    }
+
+    const nilaiFinal = hasilNilaiFinal(69);
+    document.writeln(`<p>${nilaiFinal}</p>`);
+
+    //menghentikan eksekusi dengan return
+    function isiContains(dataArray, cariNilai) {
+        for (const element of dataArray) {
+            console.info(`Iterasi Element ${element}`);
+            if (element === cariNilai) {
+                return true;
+            }
+        }
+        return false
+    }
+        const array = [1, 23, 43, 54, 65, 73, 100, 80, 43, 80, 90, 80];
+        const search = 80;
+        const found = isiContains(array, search);
+        document.writeln(`<p>${found}</p>`)
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>function value</title>
+</head>
+<body>
+    <script>
+        function sayHallo(name) {
+            document.writeln(`<p>Hello ${name}</p>`)
+        }
+            sayHallo("Rachmad Muharram")
+            const say = sayHallo;
+            say ("jojo");
+
+    //function parameter
+
+    function masukanNama(callback) {
+        callback("Mantiz");
+    }
+        masukanNama(sayHallo);
+        masukanNama(say);
+    </script>
+</body>
+</html>

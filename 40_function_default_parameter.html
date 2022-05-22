@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function pendaftaran(nama, jenis_kelamin = "tidak di ketahui") {
+            console.info(nama);
+            console.info(jenis_kelamin);
+        }
+
+        pendaftaran();
+        pendaftaran("eko");
+        pendaftaran("jojo", "mantiz");
+        pendaftaran("alfonso", undefined);
+        pendaftaran("alfonso", null);
+        pendaftaran(null, 0);
+    </script>
+</body>
+</html>

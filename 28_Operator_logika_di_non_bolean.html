@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Operator logika di non bolean</title>
+</head>
+<body>
+    <script>
+        //data pertama di ambil dari kiri kalau falsy baru yg kanan//
+        //OPERATOR OR (ATAU)
+        console.info("hello" || []); //hello
+        console.info("" || []); //[]
+        console.info("0" || "NOL"); //"0"
+        console.info(0 || "NOL"); //"NOL"
+        console.info(null || "NOLL"); //[]
+        console.info("undefined" || "UNDEFINED")////[]
+        console.info(0 || false);
+
+        const orang = {
+            fname: "",
+            lname: "Jojo"
+        };
+
+        const nama = orang.fname || orang.lname;
+        console.info(nama);
+
+        //OPERATOR AND (DAN)
+        console.info("HELLO" && ''); //c''
+        console.info("" && []); //c""
+        console.info("0" && "NOL"); //"NOL"
+        console.info(0 && "NOL"); // 0
+        console.info(null && "NULL"); // null
+        console.info(undefined && "UNDEFINED"); // undefined
+        console.info("UNDEFINED" && "null"); // null
+    </script>
+</body>
+</html>

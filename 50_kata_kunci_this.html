@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kata Kunci</title>
+</head>
+<body>
+    <script>
+        console.info(this);
+
+        function contoh(){
+            console.info(this);
+            function inner() {
+                console.info(this);
+            }
+            inner()
+        }
+        contoh();
+    //this di object method
+        const orang = {
+            name: "Rachmad",
+            sayHalo: function (nilai) {
+                console.info(`halo ${nilai} my name is ${this.name}`);
+            }
+        };
+        orang.sayHalo("budi");
+        orang.sayHalo("eko");
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>function arrow</title>
+</head>
+<body>
+    <script>
+        const katakanHalo = (nama) => {
+            const say = `Hello Mr ${nama}`;
+            console.info(say);
+        }
+
+        katakanHalo("Jojo")
+
+        //function arrow tanpa block
+        const sayHello = (nama) => console.info(`Hello Mr ${nama}`);
+
+        sayHello("Rachmad")
+
+        //yg biasa digunakan(no rekomended)
+        const hitung = (pertama, kedua) => {
+            return pertama + kedua;
+        }
+            console.info(hitung(50, 20));
+
+        //versi lebih sederhana
+        const sum = (pertama, kedua) => pertama + kedua;
+        console.info(sum(150, 100));
+        
+////////////////////////////////////////////////
+        function giveMeName(panggilKembali){
+            panggilKembali("Alphonso");
+        }
+        //anonymous function
+        giveMeName (function (nama){
+            console.info(`Hello ${nama} with anonymous function`);
+        })
+
+        //arrow function
+        giveMeName(nama => console.info(`hello ${nama} with arrow function`))
+    </script>
+</body>
+</html>

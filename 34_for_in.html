@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>For In</title>
+</head>
+<body>
+    <script>
+        const orang = {
+            fname : "rachmad",
+            mname : "muharram",
+            lname : "murdani"
+        };
+        for (const atribut in orang) {
+            document.writeln(`<p>${atribut} : ${orang[atribut]}</p>`);
+        }
+        const nama = ["jojo", "alfonso", "mantiz"];
+        for(const indek in nama){
+            document.writeln(`<p>${indek} : ${nama[indek]} </p>`);
+        }
+    </script>
+</body>
+</html>

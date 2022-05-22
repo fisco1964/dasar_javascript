@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Optional Chaining</title>
+</head>
+<body>
+    <script>
+        const orang = {
+            alamat: {
+                negara : "Indonesia"
+            }
+        };
+        let negara = orang?.alamat?.negara;
+
+         document.writeln(`sukses`);
+         document.writeln(`<p>${negara}</p>`);
+         document.writeln(`sukses`);
+    </script>
+</body>
+</html>

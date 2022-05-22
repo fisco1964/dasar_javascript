@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>function genarator</title>
+</head>
+<body>
+    <script>
+        function* buatnama(params) {
+            yield "rudi";
+            yield "alfonso";
+            yield "eric";
+        }
+        const names = buatnama();
+        for (const name of names) {
+            console.info(name)
+        }
+        
+        //lazy
+        // function generator kompleks
+        function* buatGanjil(nilai) {
+            for (let i = 1; i <= nilai; i++) {
+                if (i % 2 === 1) {
+                    console.info(`Yieldddd ${i}`);
+                    yield i;
+                }
+            }
+        }
+
+        // eager
+        function buatGanjilArray(nilai){
+            const result = []
+            for (let i = 1; i <= nilai; i++) {
+                if (i % 2 === 1) {
+                    console.info(`Yield ${i}`);
+                    result.push(i);
+                }
+            }
+            return result;
+        }
+
+        const angkaGanjil = buatGanjil(100);
+        //for (const angka of angkaGanjil) {
+          //  console.info(angka);
+        //}
+        console.info(angkaGanjil.next().value);
+        console.info(angkaGanjil.next().value);
+        console.info(angkaGanjil.next().value);
+        console.info(angkaGanjil.next().value);
+        console.info(angkaGanjil.next().value);
+    </script>
+</body>
+</html>
